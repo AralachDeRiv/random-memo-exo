@@ -19,3 +19,11 @@ body {
   width: 100lvw;
   min-height: 100lvh;
 }
+
+.card {
+  @apply p-4 rounded-xl bg-white shadow-sm;
+}
+
+.card-hover {
+  @apply transition-all duration-200 hover:bg-gray-50 hover:scale-[1.02] hover:shadow-md active:scale-95;
+}
