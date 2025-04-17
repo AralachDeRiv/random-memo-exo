@@ -17,7 +17,7 @@ const Home = () => {
       {links.map((link) => (
         <div key={link.label}>
           <Link
-            className="card card-hover flex items-center justify-center w-xs h-28 text-xl font-bold active:scale-95 hover:scale-[1.02]"
+            className="card card-hover flex items-center justify-center w-xs h-28 text-xl font-bold"
             to={link.path}
           >
             {link.label}
