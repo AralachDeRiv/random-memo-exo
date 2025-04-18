@@ -20,6 +20,18 @@ body {
   min-height: 100lvh;
 }
 
+/* Remove number input spinners for Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove number input spinners for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .card {
   @apply p-4 rounded-xl bg-white shadow-sm;
 }
