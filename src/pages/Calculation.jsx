@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import BackHomeBtn from "../components/BackHomeBtn";
 import CalculationsSettingsForm from "../components/CalculationsSettingsForm";
 import CalculationAnswerCard from "../components/CalculationAnswerCard";
+import CalculationsResultsCard from "../components/CalculationsResultsCard";
 
 const Calculation = () => {
   let [listOfCalculations, setListOfCalculations] = useState([]);
@@ -18,7 +19,7 @@ const Calculation = () => {
   }, [calculationSettings, listOfCalculations]);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center">
+    <div className="min-h-screen w-full pt-24 px-5 flex items-start md:items-center justify-center">
       <BackHomeBtn />
       {!calculationSettings.done && (
         <CalculationsSettingsForm
@@ -33,6 +34,14 @@ const Calculation = () => {
           setIndex={setIndex}
           listOfCalculations={listOfCalculations}
           setListOfCalculations={setListOfCalculations}
+        />
+      )}
+      {listOfCalculations.length > 0 && index == listOfCalculations.length && (
+        <CalculationsResultsCard
+          listOfCalculations={listOfCalculations}
+          setListOfCalculations={setListOfCalculations}
+          setCalculationSettings={setCalculationSettings}
+          setIndex={setIndex}
         />
       )}
     </div>

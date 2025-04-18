@@ -29,7 +29,7 @@ const CalculationAnswerCard = ({
         type="number"
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
-        className="w-24 px-3 py-2 text-center border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        className="w-24 px-3 py-2 text-xl font-semibold text-center border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
       />
 
       <button

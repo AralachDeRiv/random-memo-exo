@@ -15,7 +15,6 @@ body {
   color: #2d3748; /* text-gray-800 */
 
   /* default spacing and size */
-  padding: 20px;
   width: 100lvw;
   min-height: 100lvh;
 }
