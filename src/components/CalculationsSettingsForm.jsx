@@ -32,11 +32,13 @@ const generateCalculations = (count, difficulty) => {
         b = getRandomInt(min, max);
         result = a + b;
         break;
+
       case "-":
         a = getRandomInt(min, max);
         b = getRandomInt(min, a);
         result = a - b;
         break;
+
       case "*":
         b = getRandomInt(min, max);
         const maxA = Math.floor(max / b);

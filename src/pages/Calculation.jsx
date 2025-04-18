@@ -19,7 +19,7 @@ const Calculation = () => {
   }, [calculationSettings, listOfCalculations]);
 
   return (
-    <div className="min-h-screen w-full pt-24 px-5 flex items-start md:items-center justify-center">
+    <div className="min-h-screen w-full pt-24 px-5 flex items-center justify-center">
       <BackHomeBtn />
       {!calculationSettings.done && (
         <CalculationsSettingsForm

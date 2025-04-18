@@ -22,7 +22,7 @@ const CalculationsResultsCard = ({
   };
 
   return (
-    <div className="card w-full max-w-3xl mx-auto text-xs sm:text-base">
+    <div className="card w-full max-w-3xl mx-auto text-xs sm:text-base self-start sm:self-auto">
       <div className="grid grid-cols-4 gap-2 font-semibold border-b pb-2 text-gray-700 ">
         <p className="text-center">#</p>
         <p className="text-center">Expression</p>
