@@ -10,10 +10,7 @@ const Home = () => {
   ];
 
   return (
-    <div
-      id="Hello"
-      className="min-h-screen w-full flex justify-evenly items-center flex-col gap-5"
-    >
+    <div className="min-h-screen w-full flex justify-evenly items-center flex-col gap-5">
       {links.map((link) => (
         <div key={link.label}>
           <Link
