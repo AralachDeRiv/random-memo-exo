@@ -98,6 +98,7 @@ const CalculationsSettingsForm = ({
           type="number"
           name="numberOfCalculations"
           id="numberOfCalculations"
+          defaultValue="1"
           min="1"
           max="100"
           onChange={(e) =>

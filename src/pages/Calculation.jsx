@@ -6,7 +6,7 @@ import CalculationsSettingsForm from "../components/CalculationsSettingsForm";
 const Calculation = () => {
   let [listOfCalculations, setListOfCalculations] = useState([]);
   let [calculationSettings, setCalculationSettings] = useState({
-    numberOfCalculations: 0,
+    numberOfCalculations: 1,
     difficulty: "easy",
     done: false,
   });
