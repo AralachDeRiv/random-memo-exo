@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useRef } from "react";
 import BackHomeBtn from "../components/BackHomeBtn";
-import CalculationsSettingsForm from "../components/CalculationsSettingsForm";
-import CalculationAnswerCard from "../components/CalculationAnswerCard";
-import CalculationsResultsCard from "../components/CalculationsResultsCard";
+import CalculationsSettingsForm from "../components/calculation/CalculationsSettingsForm";
+import CalculationAnswerCard from "../components/calculation/CalculationAnswerCard";
+import CalculationsResultsCard from "../components/calculation/CalculationsResultsCard";
 import Timer from "../components/Timer";
 
 const Calculation = () => {
