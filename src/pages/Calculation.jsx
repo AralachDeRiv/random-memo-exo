@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState, useRef } from "react";
 import BackHomeBtn from "../components/BackHomeBtn";
 import CalculationsSettingsForm from "../components/CalculationsSettingsForm";
@@ -14,13 +14,8 @@ const Calculation = () => {
     done: false,
   });
   let [index, setIndex] = useState(0);
-
   const endTimeRef = useRef(0);
   const [isRunning, setIsRunning] = useState(false);
-
-  useEffect(() => {
-    console.log(endTimeRef.current);
-  }, [isRunning]);
 
   return (
     <div className="min-h-screen w-full pt-24 px-5 flex items-center justify-center">

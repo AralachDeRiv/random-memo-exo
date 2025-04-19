@@ -51,8 +51,8 @@ const CalculationsResultsCard = ({
         </div>
       ))}
 
-      <div className="mt-4 flex justify-between">
-        <div className="flex gap-0.5">
+      <div className="mt-4 flex justify-between flex-wrap gap-2">
+        <div className="flex gap-1">
           <p>Résultats :</p>
           <p>
             <span className="text-green-600">{rightAnswers}</span> /{" "}
@@ -60,11 +60,16 @@ const CalculationsResultsCard = ({
           </p>
         </div>
 
-        <div className="flex gap-0.5">
+        <div className="flex gap-1">
           <p>Temps écoulé :</p>
           <p className="font-semibold text-indigo-500">
             {endTimeRef.current} sec
           </p>
+          <span className="text-gray-500">
+            {`${(endTimeRef.current / listOfCalculations.length).toFixed(
+              1
+            )} s/calcul`}
+          </span>
         </div>
       </div>
 
