@@ -71,6 +71,7 @@ const CalculationsSettingsForm = ({
   setCalculationSettings,
   calculationSettings,
   setListOfCalculations,
+  setIsRunning,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -85,6 +86,8 @@ const CalculationsSettingsForm = ({
       ...prev,
       done: true,
     }));
+
+    setIsRunning(true);
   };
 
   return (

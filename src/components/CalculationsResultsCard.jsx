@@ -5,6 +5,7 @@ const CalculationsResultsCard = ({
   setListOfCalculations,
   setCalculationSettings,
   setIndex,
+  endTimeRef,
 }) => {
   const rightAnswers = listOfCalculations.reduce(
     (acc, calculation) => (calculation.isCorrect ? acc + 1 : acc),
@@ -50,12 +51,21 @@ const CalculationsResultsCard = ({
         </div>
       ))}
 
-      <div className="mt-4 flex gap-1.5">
-        <p>Résultats :</p>
-        <p>
-          <span className="text-green-600">{rightAnswers}</span> /{" "}
-          {listOfCalculations.length}
-        </p>
+      <div className="mt-4 flex justify-between">
+        <div className="flex gap-0.5">
+          <p>Résultats :</p>
+          <p>
+            <span className="text-green-600">{rightAnswers}</span> /{" "}
+            {listOfCalculations.length}
+          </p>
+        </div>
+
+        <div className="flex gap-0.5">
+          <p>Temps écoulé :</p>
+          <p className="font-semibold text-indigo-500">
+            {endTimeRef.current} sec
+          </p>
+        </div>
       </div>
 
       <div className="mt-4 w-full text-center">

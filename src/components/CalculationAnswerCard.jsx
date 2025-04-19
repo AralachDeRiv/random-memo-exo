@@ -6,6 +6,7 @@ const CalculationAnswerCard = ({
   setIndex,
   listOfCalculations,
   setListOfCalculations,
+  setIsRunning,
 }) => {
   const calculation = listOfCalculations[index];
   let [answer, setAnswer] = useState("");
@@ -19,6 +20,10 @@ const CalculationAnswerCard = ({
     });
     setAnswer("");
     setIndex((prev) => prev + 1);
+
+    if (index + 1 == listOfCalculations.length) {
+      setIsRunning(false);
+    }
   };
 
   return (
