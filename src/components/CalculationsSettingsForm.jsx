@@ -47,11 +47,11 @@ const generateCalculations = (count, difficulty) => {
         break;
 
       case "/":
-        b = getRandomInt(min, max);
         let attempts = 0;
-        const maxAttempts = 100;
+        const maxAttempts = 50;
 
         do {
+          b = getRandomInt(min, max);
           result = getRandomInt(min, Math.floor(max / b));
           a = b * result;
           attempts++;
