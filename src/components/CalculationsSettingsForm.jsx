@@ -41,15 +41,25 @@ const generateCalculations = (count, difficulty) => {
 
       case "*":
         b = getRandomInt(min, max);
-        const maxA = Math.floor(max / b);
+        const maxA = Math.max(15, Math.floor(max / b));
         a = getRandomInt(min, maxA);
         result = a * b;
         break;
 
       case "/":
         b = getRandomInt(min, max);
-        result = getRandomInt(min, Math.floor(max / b));
-        a = b * result;
+        let attempts = 0;
+        const maxAttempts = 100;
+
+        do {
+          result = getRandomInt(min, Math.floor(max / b));
+          a = b * result;
+          attempts++;
+        } while (a === b && attempts < maxAttempts);
+
+        if (attempts >= maxAttempts) {
+          a = b * getRandomInt(min, Math.floor(max / b));
+        }
         break;
     }
 
