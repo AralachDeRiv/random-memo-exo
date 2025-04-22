@@ -154,11 +154,25 @@ const generateQuestionSet = () => {
 
 const OrientationAnswerCard = ({
   numberOfQuestions,
-  setNumberOfQuestions,
+  currentQuestion,
+  setCurrentQuestion,
+  setCorrectAnswers,
   setFinished,
 }) => {
   const { rule, options } = generateQuestionSet();
   const [colorRule, directionRule] = rule;
+
+  const handleAnswerClick = (option) => {
+    if (option.isCorrect) {
+      setCorrectAnswers((prev) => prev + 1);
+    }
+
+    if (currentQuestion + 1 < numberOfQuestions) {
+      setCurrentQuestion((prev) => prev + 1);
+    } else {
+      setFinished(true);
+    }
+  };
 
   return (
     <div className="card text-md sm:text-lg font-semibold flex flex-col items-center gap-3">
@@ -192,7 +206,8 @@ const OrientationAnswerCard = ({
           return (
             <div
               key={index}
-              className="flex flex-col justify-center items-center w-20 h-20 border-2 border-gray-600 rounded-lg m-2"
+              className="flex flex-col justify-center items-center w-20 h-20 border-2 border-gray-400 rounded-lg m-2 hover:scale-95 cursor-pointer active:scale-95 transition-all duration-200"
+              onClick={() => handleAnswerClick(option)}
             >
               <div
                 className="w-10 h-10 flex items-center justify-center border-gray-600 "
