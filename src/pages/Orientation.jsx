@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import BackHomeBtn from "../components/BackHomeBtn";
-import OrientationsSettingsForm from "../components/orientation/OrientationsSettingsForm";
 import OrientationAnswerCard from "../components/orientation/OrientationAnswerCard";
+import OrientationsSettingsForm from "../components/orientation/OrientationsSettingsForm";
+import OrientationsResultsCard from "../components/orientation/OrientationsResultsCard";
 
 const Orientation = () => {
   const [numberOfQuestions, setNumberOfQuestions] = useState(null);
@@ -21,6 +22,17 @@ const Orientation = () => {
         <OrientationAnswerCard
           numberOfQuestions={numberOfQuestions}
           currentQuestion={currentQuestion}
+          setCurrentQuestion={setCurrentQuestion}
+          setCorrectAnswers={setCorrectAnswers}
+          setFinished={setFinished}
+        />
+      )}
+
+      {finished && (
+        <OrientationsResultsCard
+          numberOfQuestions={numberOfQuestions}
+          correctAnswers={correctAnswers}
+          setNumberOfQuestions={setNumberOfQuestions}
           setCurrentQuestion={setCurrentQuestion}
           setCorrectAnswers={setCorrectAnswers}
           setFinished={setFinished}
