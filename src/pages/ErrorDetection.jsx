@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import BackHomeBtn from "../components/BackHomeBtn";
 import DetectionSettingsForm from "../components/detection/DetectionSettingsForm";
+import Timer from "../components/Timer";
+import DetectionAnswerCard from "../components/detection/DetectionAnswerCard";
 
 const ErrorDetection = () => {
   const [numberOfQuestions, setNumberOfQuestions] = useState(null);
@@ -19,6 +21,23 @@ const ErrorDetection = () => {
           setNumberOfQuestions={setNumberOfQuestions}
           setIsRunning={setIsRunning}
         />
+      )}
+
+      {currentQuestion < numberOfQuestions && !finished && (
+        <>
+          <Timer
+            isRunning={isRunning}
+            setEndTime={(time) => (endTimeRef.current = time)}
+          />
+
+          <DetectionAnswerCard
+            numberOfQuestions={numberOfQuestions}
+            currentQuestion={currentQuestion}
+            setCurrentQuestion={setCurrentQuestion}
+            setCorrectAnswers={setCorrectAnswers}
+            setFinished={setFinished}
+          />
+        </>
       )}
     </div>
   );
