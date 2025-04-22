@@ -3,6 +3,7 @@ import BackHomeBtn from "../components/BackHomeBtn";
 import DetectionSettingsForm from "../components/detection/DetectionSettingsForm";
 import Timer from "../components/Timer";
 import DetectionAnswerCard from "../components/detection/DetectionAnswerCard";
+import DetectionsResultsCard from "../components/detection/DetectionsResultsCard";
 
 const ErrorDetection = () => {
   const [numberOfQuestions, setNumberOfQuestions] = useState(null);
@@ -38,6 +39,18 @@ const ErrorDetection = () => {
             setFinished={setFinished}
           />
         </>
+      )}
+
+      {finished && (
+        <DetectionsResultsCard
+          numberOfQuestions={numberOfQuestions}
+          correctAnswers={correctAnswers}
+          setNumberOfQuestions={setNumberOfQuestions}
+          setCurrentQuestion={setCurrentQuestion}
+          setCorrectAnswers={setCorrectAnswers}
+          setFinished={setFinished}
+          endTimeRef={endTimeRef}
+        />
       )}
     </div>
   );
