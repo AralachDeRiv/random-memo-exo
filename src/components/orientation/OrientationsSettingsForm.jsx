@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-const OrientationsSettingsForm = ({ setNumberOfQuestions }) => {
+const OrientationsSettingsForm = ({ setNumberOfQuestions, setIsRunning }) => {
   const [number, setNumber] = useState(1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (number >= 1) {
       setNumberOfQuestions(number);
+      setIsRunning(true);
     }
   };
 
