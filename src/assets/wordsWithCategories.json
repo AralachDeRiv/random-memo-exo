@@ -117,19 +117,6 @@
     "Cerisier",
     "Bambou"
   ],
-  "Liquide": [
-    "Jus",
-    "Eau",
-    "Huile",
-    "Lait",
-    "Soda",
-    "Vin",
-    "Bière",
-    "Café",
-    "Thé",
-    "Vinaigre",
-    "Chlorophylle"
-  ],
   "Métal": [
     "Fer",
     "Cuivre",
@@ -339,7 +326,7 @@
     "Tortue",
     "Canari"
   ],
-  "Moyen de transport": [
+  "Transport": [
     "Trottinette",
     "Métro",
     "TGV",
@@ -394,7 +381,7 @@
     "Lavande",
     "Tournesol"
   ],
-  "Membre du corps": [
+  "Corps": [
     "Main",
     "Pied",
     "Bras",
@@ -453,7 +440,7 @@
     "Sphère",
     "Pyramide"
   ],
-  "Mois de l'année": [
+  "Mois": [
     "Janvier",
     "Février",
     "Mars",
@@ -467,7 +454,7 @@
     "Novembre",
     "Décembre"
   ],
-  "Jour de la semaine": [
+  "Jour": [
     "Lundi",
     "Mardi",
     "Mercredi",
@@ -497,7 +484,7 @@
     "Russe",
     "Arabe"
   ],
-  "Type de chaussure": [
+  "Chaussure": [
     "Basket",
     "Sandale",
     "Talons",
@@ -507,7 +494,7 @@
     "Escarpins",
     "Derby"
   ],
-  "Type de chapeau": [
+  "Chapeau": [
     "Casquette",
     "Béret",
     "Fedora",
