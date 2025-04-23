@@ -88,10 +88,10 @@ const WordsCategoriesAnswerCard = ({
       {exercise && !showWords && (
         <div
           onClick={() => setShowWords(true)}
-          className="cursor-pointer w-full h-full flex justify-around gap-6 hover:scale-[0.98] active:scale-[0.98] transition duration-200"
+          className="cursor-pointer w-full h-full flex flex-wrap justify-around gap-6 hover:scale-[0.98] active:scale-[0.98] transition duration-200"
         >
           {exercise.rules.map((category, index) => (
-            <p key={index} className="text-lg font-bold">
+            <p key={index} className="whitespace-nowrap text-md font-bold">
               {category}
             </p>
           ))}
@@ -104,7 +104,7 @@ const WordsCategoriesAnswerCard = ({
             {exercise.words.map((word, index) => (
               <p
                 key={index}
-                className="whitespace-nowrap text-lg font-semibold"
+                className="whitespace-nowrap text-md font-semibold"
               >
                 {word}
               </p>
