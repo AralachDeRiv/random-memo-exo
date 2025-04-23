@@ -141,7 +141,7 @@ const DetectionAnswerCard = ({
   };
 
   return (
-    <div className="card flex flex-col items-center justify-center gap-4 p-4 shadow-lg rounded-xl bg-white">
+    <div className="card flex flex-col items-center justify-center gap-4">
       <div className="flex flex-col items-center justify-center gap-2">
         <p className="text-lg">{original}</p>
         <p className="text-lg">{copy}</p>
@@ -154,7 +154,7 @@ const DetectionAnswerCard = ({
           <button
             onClick={() => handleClick(index)}
             key={index}
-            className="px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition active:scale-95 shadow-sm"
+            className="cursor-pointer px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition active:scale-95 shadow-sm"
           >
             {index}
           </button>
