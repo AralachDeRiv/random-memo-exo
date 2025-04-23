@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import BackHomeBtn from "../components/BackHomeBtn";
-import WordsCategoriesSettingsForm from "../components/words-categories/WordsCategoriesSettingsForm";
-import WordsCategoriesAnswerCard from "../components/words-categories/WordsCategoriesAnswerCard";
 import Timer from "../components/Timer";
+import WordsCategoriesAnswerCard from "../components/words-categories/WordsCategoriesAnswerCard";
+import WordsCategoriesResultsCard from "../components/words-categories/WordsCategoriesResultsCard";
+import WordsCategoriesSettingsForm from "../components/words-categories/WordsCategoriesSettingsForm";
 
 const WordsCategories = () => {
   const [numberOfQuestions, setNumberOfQuestions] = useState(null);
@@ -11,12 +12,6 @@ const WordsCategories = () => {
   const [finished, setFinished] = useState(false);
   const endTimeRef = useRef(0);
   const [isRunning, setIsRunning] = useState(false);
-
-  useEffect(() => {
-    console.log("currentQuestion", currentQuestion);
-    console.log("numberOfQuestions", numberOfQuestions);
-    console.log("correctAnswers", correctAnswers);
-  }, [currentQuestion, numberOfQuestions, correctAnswers]);
 
   return (
     <div className="min-h-screen w-full pt-24 px-5 flex items-center justify-center">
@@ -44,6 +39,18 @@ const WordsCategories = () => {
             setFinished={setFinished}
           />
         </>
+      )}
+
+      {finished && (
+        <WordsCategoriesResultsCard
+          numberOfQuestions={numberOfQuestions}
+          correctAnswers={correctAnswers}
+          setNumberOfQuestions={setNumberOfQuestions}
+          setCurrentQuestion={setCurrentQuestion}
+          setCorrectAnswers={setCorrectAnswers}
+          setFinished={setFinished}
+          endTimeRef={endTimeRef}
+        />
       )}
     </div>
   );
